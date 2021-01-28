@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>JavaScript Bàsics</title>
+</head>
+<body>
+    <h1 class="m-5">Entrega d'exercici de Javascript Bàsic (M7 )</h1>
+    <h2 class="m-5">Nivell 1</h2>
+    <div>
+        <button class="btn btn-primary ms-5 mt-1" onClick="showName()">Exercici 1</button>
+    </div>
+    <div>
+        <button class="btn btn-primary ms-5 mt-2" onClick="showAlert()">Exercici 2</button>
+    </div>
+    <div>
+        <button class="btn btn-primary ms-5 mt-2" onClick="varibleName('Jordi', 'Fuentes')">Exercici 3</button>
+    </div>
+    <div>
+        <button class="btn btn-primary ms-5 mt-2" onClick="plusNumber(10, 12)">Exercici 4</button>
+    </div>
+    <div>
+        <button class="btn btn-primary ms-5 mt-2" onClick="examNote(4.9)">Exercici 5</button>
+    </div>
+    <div>
+        <button class="btn btn-primary ms-5 mt-2" onClick="replaceWords()">Exercici 6</button>
+    </div>
+    <div>
+        <button class="btn btn-primary ms-5 mt-2" onClick="objectList()">Exercici 7</button>
+    </div>
+    <div>
+        <button class="btn btn-primary ms-5 mt-2" onClick="calcular()">Exercici 8</button>
+    </div>
+    <h2 class="m-5">Nivell 2</h2>
+    <div>
+        <button class="btn btn-primary ms-5 mt-2" onClick="calcularNivell2()">Exercici 1</button>
+    </div>
+    <h2 class="m-5">Nivell 3</h2>
+    <div class="m-5">
+        <input class="m-2" type="number" id="numero1" placeholder="Introdueix un número">
+    </br>
+        <input class="m-2" type="number" id="numero2" placeholder="Introdueix un número">
+    </br>
+        <label  class="m-2"for="operacion">Selecciona operació</label>
+
+        <select id="operacion">
+            <option value="sumar">Sumar</option>
+            <option value="restar">Restar</option>
+            <option value="multi">Multiplicar</option>
+            <option value="divi">Dividir</option>
+        </select>
+    </br>
+        <button class="btn btn-success m-2" id="calcular">Calcular</button>
+       <output id="resultado"></output>
+    </div>
+    <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+</body>
+</html>
