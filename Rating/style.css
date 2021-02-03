@@ -1,0 +1,21 @@
+.minh-100 {
+    height: 100vh;
+}
+
+
+label{ color:grey;}
+
+input[type = "radio"]{ 
+    display:none;
+}
+.clasificacion{
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+.star {
+   font-size: x-large;
+   padding:0 15px;
+}
+label:hover{color:orange;}
+label:hover ~ label{color:orange;}
+input[type = "radio"]:checked ~ label{color:orange;}
