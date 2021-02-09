@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>JavaScript - Validacions</title>
+</head>
+<body>
+    <div class="container">
+        <div class="col-12 mb-5">
+            <p class="h1 text-center">Validació de formularis</p>
+        </div>
+        <div class="row">
+            <div class="col-12 mb-5">
+                <p class="h2">Nivell 1</p>
+            </div>
+            <div class="col-6">
+                <div>
+                    <div>
+                        <p class="h3">Formulari de recerca</p>
+                    </div>           
+                    <form class="" onsubmit="return validateSearch()">
+                        <div class="form-group">
+                            <label for="searchWord">Què vols buscar?</label>
+                            <input type="text" class="form-control" id="searchWord" placeholder="Introdueix la cerca...">
+                        </div>
+                        <div id="error"></div>
+                            <button type="submit" class="btn btn-primary">Cerca</button>
+                  </form>
+                </div>
+            </div>
+            <div class="col-6">
+                <div>
+                    <div>
+                        <p class="h3">Formulari de login</p>
+                    </div>
+                        <form class="" onsubmit="return validateLogin()">           
+                        <div class="form-group">
+                            <label for="email">Correu electrònic</label>
+                            <input type="text" class="form-control" id="email" placeholder="Introdueix el teu correu">
+                        </div>
+                        <div class="form-group">
+                            <label for="pw">Contrasenya</label>
+                            <input type="password" class="form-control" id="pw" placeholder="Introdueix contrasenya">
+                        </div>
+                        <div id="errorLogin"></div>
+                            <button type="submit" class="btn btn-primary">Accedir</button>
+                        </form>
+                </div>
+            </div>
+            <div class="col-6">
+                <div>
+                    <div>
+                        <p class="h3">Formulari de registre</p>
+                    </div>
+                        <form class="" onsubmit="return validateRegister()">           
+                        <div class="form-group">
+                            <label for="emailRegister">Correu electrònic</label>
+                            <input type="text" class="form-control" id="emailRegister" placeholder="Introdueix el teu correu">
+                        </div>
+                        <div class="form-group">
+                            <label for="pw">Contrasenya</label>
+                            <input type="password" class="form-control" id="pwRegister" placeholder="Introdueix contrasenya">
+                        </div>
+                        <div class="form-group">
+                            <label for="pw">Repeteix la Contrasenya</label>
+                            <input type="password" class="form-control" id="pwrepiteRegister" placeholder="Repeteix la contrasenya">
+                        </div>
+                        <div class="form-group">
+                            <label for="Select">Selecciona la teva provincia</label>
+                            <select class="form-control" id="selectRegister" placeholder="Selecciona la teva provincia">
+                              <option>A Coruña</option>
+                              <option>Álava</option>
+                              <option>Albacete</option>
+                              <option>Alicante</option>
+                              <option>Almeria</option>
+                              <option>Asturias</option>
+                              <option>Ávila</option>
+                              <option>Badajoz</option>
+                              <option>Baleares</option>
+                              <option>Barcelona</option>
+                              <option>Burgos</option>
+                              <option>Cáceres</option>
+                              <option>Cádiz</option>
+                              <option>Cantabria</option>
+                              <option>Castellón</option>
+                              <option>Ciudad Real</option>
+                              <option>Córdoba</option>
+                              <option>Cuenca</option>
+                              <option>Girona</option>
+                              <option>Granada</option>
+                              <option>Guadalajara</option>
+                              <option>Gipuzkoa</option>
+                              <option>Huelva</option>
+                              <option>Huesca</option>
+                              <option>Jaén</option>
+                              <option>La Rioja</option>
+                              <option>Las Palmas</option>
+                              <option>León</option>
+                              <option>Lérida</option>
+                              <option>Lugo</option>
+                              <option>Madrid</option>
+                              <option>Málaga/option>
+                              <option>Murcia</option>
+                              <option>Navarra</option>
+                              <option>Ourense</option>
+                              <option>Palencia</option>
+                              <option>Pontevedra</option>
+                              <option>Salamanca</option>
+                              <option>Segovia/option>
+                              <option>Sevilla</option>
+                              <option>Soria</option>
+                              <option>Tarragona</option>
+                              <option>Teruel</option>
+                              <option>Toledo</option>
+                              <option>Valencia</option>
+                              <option>Valladolid</option>
+                              <option>Vizcaya</option>
+                              <option>Zamora</option>
+                              <option>Zaragoza</option>
+                            </select>
+                          </div>
+                        <div id="errorRegister"></div>
+                            <button type="submit" class="btn btn-primary">Registrar</button>
+                        </form>
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div class="row mt-5">
+            <div class="col-12 mb-5">
+                <p class="h2">Nivell 2</p>
+            </div>
+            <div class="col-6">
+                <p class="h3">Valida contrasenya    </p>
+                <form onsubmit="return validatePassword()">
+                    <div class="form-group">
+                        <label for="pw">Contrasenya</label>
+                        <input type="text" class="form-control" id="passwordUser" placeholder="Introdueix contrasenya">
+                    </div>
+                    <div id="errPwN2"></div>
+                            <button type="submit" class="btn btn-primary">Accedir</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
